@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder | Create Your Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">CV Builder</div>
+        <div class="user-info">
+            <span id="user-greeting">Welcome, User</span>
+            <button onclick="logout()" class="btn-logout">Logout</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <div class="section-header">
+                <h2><i class="fas fa-user-edit"></i> Personal Information</h2>
+                <p>Fill in the details to generate your professional CV.</p>
+            </div>
+
+            <form id="cv-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName" required placeholder="e.g. Alice Smith">
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Name</label>
+                        <input type="text" id="fatherName" required placeholder="e.g. Bob Smith">
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" id="age" required placeholder="e.g. 25">
+                    </div>
+                    <div class="form-group">
+                        <label>CNIC</label>
+                        <input type="text" id="cnic" required placeholder="00000-0000000-0">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="+1 234 567 8900">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Email</label>
+                        <input type="email" id="email" required placeholder="alice@example.com">
+                    </div>
+                </div>
+
+                <div class="section-header mt-4">
+                    <h2><i class="fas fa-graduation-cap"></i> Education & Skills</h2>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Education (Highest Degree)</label>
+                        <input type="text" id="education" required
+                            placeholder="e.g. BS Computer Science, XYZ University">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Skills (Comma separated)</label>
+                        <textarea id="skills" rows="3" placeholder="HTML, CSS, JavaScript, Leadership..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Experience</label>
+                        <textarea id="experience" rows="4" placeholder="Describe your work experience..."></textarea>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Template Selection Section -->
+        <section class="template-section">
+            <div class="section-header">
+                <h2><i class="fas fa-palette"></i> Select Template</h2>
+                <p>Choose a design for your CV.</p>
+            </div>
+
+            <div class="template-grid">
+                <!-- Template 1: Modern Split -->
+                <div class="template-card selected" onclick="selectTemplate(1)">
+                    <div class="template-preview t1">
+                        <div class="tp-sidebar">
+                            <div class="tp-head">CONTACT</div>
+                            <div class="tp-text">Email, Phone</div>
+                            <br>
+                            <div class="tp-head">SKILLS</div>
+                            <div class="tp-text">JS, CSS, HTML</div>
+                        </div>
+                        <div class="tp-content">
+                            <div class="tp-head" style="font-size:10px; border:none; margin-bottom:10px;">JOHN DOE</div>
+                            <div class="tp-head">EXPERIENCE</div>
+                            <div class="tp-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="tp-head">EDUCATION</div>
+                            <div class="tp-text">University of XYZ</div>
+                        </div>
+                    </div>
+                    <h4>Modern Split</h4>
+                </div>
+
+                <!-- Template 2: Executive -->
+                <div class="template-card" onclick="selectTemplate(2)">
+                    <div class="template-preview t2">
+                        <div class="tp-header">
+                            <span class="tp-header-text">JOHN DOE</span>
+                            <span style="color:#e74c3c; font-size:6px;">Professional</span>
+                        </div>
+                        <div class="tp-body">
+                            <div class="tp-head">EXPERIENCE HISTORY</div>
+                            <div class="tp-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <br>
+                            <div class="tp-head">EDUCATION</div>
+                            <div class="tp-text">Ut enim ad minim veniam, quis nostrud exercitation.</div>
+                        </div>
+                    </div>
+                    <h4>Executive</h4>
+                </div>
+
+                <!-- Template 3: Tech Minimal -->
+                <div class="template-card" onclick="selectTemplate(3)">
+                    <div class="template-preview t3">
+                        <div class="tp-body">
+                            <div class="tp-main-mini">
+                                <span class="tp-head">EDUCATION</span>
+                                <div class="tp-text">Duis aute irure dolor in reprehenderit.</div>
+                                <br>
+                                <span class="tp-head">WORK</span>
+                                <div class="tp-text">Excepteur sint occaecat cupidatat non proident.</div>
+                            </div>
+                            <div class="tp-sidebar-mini">
+                                <span class="tp-head" style="border-bottom:2px solid #00b894;">DOB</span>
+                                <div class="tp-text">01/01/1990</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Tech Minimal</h4>
+                </div>
+
+                <!-- Template 4: Classic Grid -->
+                <div class="template-card" onclick="selectTemplate(4)">
+                    <div class="template-preview t4">
+                        <div class="tp-border">
+                            <div class="tp-header">JOHN DOE</div>
+                            <div class="tp-box tp-full">
+                                <div class="tp-head">PROFILE</div>
+                                <div class="tp-text">Summary of qualifications...</div>
+                            </div>
+                            <div class="tp-box tp-half">
+                                <div class="tp-head">SKILLS</div>
+                                <div class="tp-text">List of skills...</div>
+                            </div>
+                            <div class="tp-box tp-half">
+                                <div class="tp-head">EDU</div>
+                                <div class="tp-text">Degree details...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Classic Grid</h4>
+                </div>
+            </div>
+
+            <div class="action-area">
+                <button type="button" onclick="generateCV()" class="btn-generate">
+                    Generate CV <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+
+</html>

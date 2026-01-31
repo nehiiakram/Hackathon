@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    background: #ddd;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.a4-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    color: #333;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+    height: 10px;
+    background: #00b894;
+    width: 100%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.container {
+    padding: 40px 50px;
+}
+
+header {
+    border-bottom: 2px solid #f1f2f6;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    font-family: 'Roboto Mono', monospace;
+    color: #00b894;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.contact-grid {
+    margin-top: 15px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    color: #636e72;
+    display: flex;
+    gap: 20px;
+}
+
+/* Layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+/* Main */
+.heading-accent {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    background: #f1f2f6;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    color: #2d3436;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Sidebar */
+.sidebar-head {
+    font-size: 0.9rem;
+    border-bottom: 2px solid #00b894;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 2px;
+}
+
+.clean-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.clean-list li {
+    margin-bottom: 15px;
+}
+
+.clean-list small {
+    color: #b2bec3;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.tags-cloud {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    color: #00b894;
+    line-height: 1.8;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+
+    .a4-page {
+        box-shadow: none;
+        width: 100%;
+        min-height: 100vh;
+    }
+}

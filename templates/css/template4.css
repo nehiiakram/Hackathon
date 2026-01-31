@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+body {
+    background: #f0f0f0;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.a4-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    padding: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    /* Crucial for padding */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin: 0;
+    color: #222;
+}
+
+.separator {
+    width: 100px;
+    height: 3px;
+    background: #222;
+    margin: 15px auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.meta-info {
+    color: #666;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 0.9rem;
+}
+
+/* Grid System */
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.box {
+    border: 1px solid #ddd;
+    padding: 25px;
+    background: #fafafa;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.full {
+    width: 100%;
+}
+
+.half {
+    width: calc(50% - 15px);
+}
+
+h3 {
+    margin-top: 0;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #222;
+    font-size: 1.2rem;
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+p {
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+    text-align: justify;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+
+    .a4-page {
+        width: 100%;
+        min-height: 100vh;
+        box-shadow: none;
+        padding: 40px;
+    }
+
+    .box {
+        background: #fafafa !important;
+        border: 1px solid #ddd;
+    }
+}

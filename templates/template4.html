@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV | Classic Grid</title>
+    <link rel="stylesheet" href="css/template4.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="a4-page">
+        <header>
+            <h1 id="cv-name"></h1>
+            <div class="separator"></div>
+            <div class="meta-info">
+                <span><i class="fas fa-envelope"></i> <span id="cv-email"></span></span>
+                <span><i class="fas fa-phone"></i> <span id="cv-phone"></span></span>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <div class="box full">
+                <h3><i class="fas fa-user-circle"></i> Profile & Details</h3>
+                <div class="details-row">
+                    <span><strong>Father:</strong> <span id="cv-father"></span></span>
+                    <span><strong>CNIC:</strong> <span id="cv-cnic"></span></span>
+                    <span><strong>DOB:</strong> <span id="cv-dob"></span></span>
+                </div>
+            </div>
+
+            <div class="box half">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <p id="cv-education"></p>
+            </div>
+
+            <div class="box half">
+                <h3><i class="fas fa-star"></i> Skills</h3>
+                <p id="cv-skills"></p>
+            </div>
+
+            <div class="box full">
+                <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                <p id="cv-experience"></p>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>

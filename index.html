@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <!-- Login Form -->
+        <div id="login-form">
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Login to continue building your CV</p>
+            </div>
+            <p id="login-error" class="error-msg"></p>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="toggle-text">
+                Don't have an account? <a onclick="toggleAuth()">Sign up</a>
+            </p>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-form" class="hidden">
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p>Start your professional journey</p>
+            </div>
+            <p id="signup-error" class="error-msg"></p>
+            <form onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required placeholder="Create a password">
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p class="toggle-text">
+                Already have an account? <a onclick="toggleAuth()">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>

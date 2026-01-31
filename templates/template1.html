@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV | Modern Professional</title>
+    <link rel="stylesheet" href="css/template1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="a4-page">
+        <div class="left-col">
+            <div class="profile-header">
+                <h1 id="cv-name">JOHN DOE</h1>
+                <p id="cv-title">Professional Title</p>
+            </div>
+
+            <section class="info-section">
+                <h3><i class="fas fa-address-card"></i> Contact</h3>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span id="cv-email">email@example.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span id="cv-phone">+123456789</span>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h3><i class="fas fa-user"></i> Personal</h3>
+                <div class="info-item">
+                    <span>Father:</span> <span id="cv-father"></span>
+                </div>
+                <div class="info-item">
+                    <span>CNIC:</span> <span id="cv-cnic"></span>
+                </div>
+                <div class="info-item">
+                    <span>DOB:</span> <span id="cv-dob"></span>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h3><i class="fas fa-lightbulb"></i> Skills</h3>
+                <div id="cv-skills" class="skills-list"></div>
+            </section>
+        </div>
+
+        <div class="right-col">
+            <section class="main-section">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="divider"></div>
+                <p id="cv-education" class="content-text"></p>
+            </section>
+
+            <section class="main-section">
+                <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                <div class="divider"></div>
+                <p id="cv-experience" class="content-text"></p>
+            </section>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
