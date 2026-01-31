@@ -1,0 +1,18 @@
+/* Template 4 — Corporate Clean (refined) */
+.cv-template.t4{background:#ffffff;padding:20px;border-radius:10px;height:auto;min-height:auto;max-width:720px;width:100%;margin:24px auto;font-family:Inter,Arial;color:#0b1220;border-left:8px solid #0ea5a3;box-sizing:border-box;overflow:visible;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.cv-template.t4 .cv-shell{height:auto;overflow:visible}
+.cv-template.t4, .cv-template.t4 *{box-sizing:border-box}
+.cv-template.t4 p{white-space:normal;word-break:break-word}
+@media (max-width:720px){.cv-template.t4{height:auto;min-height:auto;padding:12px;margin:10px}.cv-template.t4 .cv-shell{height:auto}}
+.cv-template.t4 [data-field="phone"], .t4-body p strong + span[data-field="phone"]{white-space:nowrap;font-weight:600;overflow:visible}
+.t4-head{padding-bottom:6px;position:sticky;top:84px;z-index:30;background:inherit}
+.t4-head h1{margin:0;font-size:24px;font-weight:700}
+@media (max-width:720px){.t4-head{top:72px}} 
+.t4-head p{color:#6b7280;margin:8px 0;font-size:13px}
+.t4-meta{display:flex;gap:10px;color:#475569;font-size:13px;margin-top:6px}
+.t4-body{display:flex;gap:22px;margin-top:16px}
+.t4-body h3{margin:6px 0;font-size:14px}
+.t4-body p{font-size:13px;color:#334155;line-height:1.5}
+.t4-section{padding-bottom:10px;border-bottom:1px solid #eef2f7;margin-bottom:12px}
+@media (max-width:720px){.t4-body{flex-direction:column}} 
+@media print{body{margin:0}.cv-template.t4{box-shadow:none;border-left:none;border-radius:0}}

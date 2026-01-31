@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV Builder — Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Fixed Navbar (shown only on authenticated pages) -->
+  <nav class="dash-navbar fixed-top">
+    <div class="dash-nav-inner">
+      <div class="brand">
+        <strong class="brand-name">CV Builder</strong>
+      </div>
+      <div class="nav-actions">
+        <label class="switch" title="Toggle theme">
+          <input id="navThemeToggle" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <button id="createBtn" class="btn btn-sm btn-primary">Create</button>
+        <button id="logoutBtn" class="btn btn-sm btn-outline-secondary">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard frame to layout desktop-size template preview area -->
+  <main class="dashboard-frame" role="main">
+    <div class="dashboard-inner">
+      <header class="d-flex justify-content-between align-items-center mb-4 dashboard-header">
+        <h1 class="h4">Dashboard</h1>
+        <div class="muted">Welcome back — Manage your CVs and projects</div>
+      </header>
+
+      <section class="card p-3 mb-3 center-card">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h5 class="m-0">My Resumes</h5>
+          <input id="searchInput" class="form-control form-control-sm" style="width:220px" placeholder="Search by name or title" />
+        </div>
+        <div id="resumesList" class="mt-2" style="display:grid;gap:10px">
+          <!-- resumes list appears here -->
+        </div>
+        <div id="noResumes" class="muted mt-2">No resumes yet. Click Create to start.</div>
+      </section>
+
+      <!-- Projects / Template Previews -->
+      <section id="projectsPanel" class="card p-3 mb-3 hidden">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="m-0">Projects & Template Previews</h5>
+          <div class="muted">Click a card to preview or apply</div>
+        </div>
+        <div class="projects-grid">
+          <!-- placeholder project cards -->
+          <div class="project-card">
+            <div class="project-preview"><img src="https://via.placeholder.com/360x220" alt="preview"/></div>
+            <div class="project-meta">
+              <div class="project-title">Marketing CV — Template 1</div>
+              <div class="project-desc muted">Professional layout optimized for recruiters.</div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-preview"><img src="https://via.placeholder.com/360x220" alt="preview"/></div>
+            <div class="project-meta">
+              <div class="project-title">Designer CV — Template 3</div>
+              <div class="project-desc muted">Bold accent sidebar with compact content.</div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-preview"><img src="https://via.placeholder.com/360x220" alt="preview"/></div>
+            <div class="project-meta">
+              <div class="project-title">Executive CV — Template 2</div>
+              <div class="project-desc muted">Dark, classic, and print-friendly.</div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-preview"><img src="https://via.placeholder.com/360x220" alt="preview"/></div>
+            <div class="project-meta">
+              <div class="project-title">Corporate CV — Template 4</div>
+              <div class="project-desc muted">Clean, corporate look with strong accents.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="muted text-center" style="padding:14px 0">Placeholder dashboard footer — version 1.0</footer>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

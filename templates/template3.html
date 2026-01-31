@@ -1,56 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>CV | Tech Minimal</title>
-    <link rel="stylesheet" href="css/template3.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="a4-page">
-        <div class="top-bar"></div>
-        <div class="container">
-            <header>
-                <h1 id="cv-name"></h1>
-                <p class="subtitle" id="cv-title">DEVELOPER</p>
-                <div class="contact-grid">
-                    <span><i class="fas fa-envelope"></i> <span id="cv-email"></span></span>
-                    <span><i class="fas fa-phone"></i> <span id="cv-phone"></span></span>
-                </div>
-            </header>
-
-            <div class="grid-layout">
-                <main>
-                    <section>
-                        <h3 class="heading-accent">EDUCATION</h3>
-                        <p id="cv-education"></p>
-                    </section>
-                    <section>
-                        <h3 class="heading-accent">WORK EXPERIENCE</h3>
-                        <p id="cv-experience"></p>
-                    </section>
-                </main>
-
-                <aside>
-                    <section>
-                        <h4 class="sidebar-head">PERSONAL</h4>
-                        <ul class="clean-list">
-                            <li><small>Father</small><br><span id="cv-father"></span></li>
-                            <li><small>CNIC</small><br><span id="cv-cnic"></span></li>
-                            <li><small>Born</small><br><span id="cv-dob"></span></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4 class="sidebar-head">SKILLS</h4>
-                        <div id="cv-skills" class="tags-cloud"></div>
-                    </section>
-                </aside>
-            </div>
-        </div>
+<div class="cv-template t3">
+  <div class="cv-shell p-0 d-flex" style="height:100%">
+    <div class="t3-side p-3 text-white" style="background:linear-gradient(135deg,#7c3aed,#06b6d4);width:170px">
+      <h3 data-field="fullName" class="h5">Alex Joe</h3>
+      <p data-field="skills">UI/UX, React</p>
     </div>
-    <script src="renderer.js"></script>
-</body>
-
-</html>
+    <div class="t3-main p-3 flex-grow-1 bg-white">
+    <h6>About</h6>
+    <p data-field="experience">Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="mb-1"><strong>DOB:</strong> <span data-field="dob">1992-07-12</span></p>
+    <p class="mb-1"><strong>Phone:</strong> <span data-field="phone">+0 000 000 0000</span></p>
+    <p class="mb-1"><strong>Languages:</strong> <span data-field="languages">English, Urdu</span></p>
+    <p class="mb-0"><strong>Religion:</strong> <span data-field="religion">Other</span></p>
+    </div>
+  </div>
+</div>

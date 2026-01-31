@@ -1,59 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>CV | Executive</title>
-    <link rel="stylesheet" href="css/template2.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="a4-page">
-        <header>
-            <div class="header-content">
-                <h1 id="cv-name">JOHN DOE</h1>
-                <p id="cv-title">Professional Title</p>
-            </div>
-            <div class="header-contact">
-                <div><i class="fas fa-envelope"></i> <span id="cv-email"></span></div>
-                <div><i class="fas fa-phone"></i> <span id="cv-phone"></span></div>
-            </div>
-        </header>
-
-        <section class="personal-details">
-            <div class="detail-box">
-                <label>Date of Birth</label>
-                <span id="cv-dob"></span>
-            </div>
-            <div class="detail-box">
-                <label>CNIC</label>
-                <span id="cv-cnic"></span>
-            </div>
-            <div class="detail-box">
-                <label>Father's Name</label>
-                <span id="cv-father"></span>
-            </div>
-        </section>
-
-        <div class="main-body">
-            <section>
-                <h2 class="section-title">Experience History</h2>
-                <div class="content" id="cv-experience"></div>
-            </section>
-
-            <section>
-                <h2 class="section-title">Education & Qualifications</h2>
-                <div class="content" id="cv-education"></div>
-            </section>
-
-            <section>
-                <h2 class="section-title">Competencies & Skills</h2>
-                <div class="skills-content" id="cv-skills"></div>
-            </section>
-        </div>
+<div class="cv-template t2">
+  <div class="cv-shell p-3" style="background:#0b1324;border-radius:8px;">
+    <div class="t2-top mb-3">
+      <h2 data-field="fullName" class="h4">Jane Smith</h2>
+      <div class="text-muted" data-field="education">M.A. Communication</div>
     </div>
-    <script src="renderer.js"></script>
-</body>
-
-</html>
+    <div class="t2-main row">
+      <div class="t2-left col-md-8">
+      <h6>Experience</h6>
+      <p data-field="experience">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+    </div>
+    <div class="t2-right col-md-4 bg-white bg-opacity-10 p-2 rounded">
+      <p class="mb-1"><strong>Phone:</strong> <span data-field="phone">+0 000 000 0000</span></p>
+      <p class="mb-1"><strong>CNIC:</strong> <span data-field="cnic">00000-0000000-0</span></p>
+      <p class="mb-1"><strong>Languages:</strong> <span data-field="languages">English</span></p>
+      <p class="mb-1"><strong>Religion:</strong> <span data-field="religion">Christianity</span></p>
+      <p class="mb-0"><strong>Skills:</strong> <span data-field="skills">Design, Copywriting</span></p>
+    </div>
+  </div>
+</div>
